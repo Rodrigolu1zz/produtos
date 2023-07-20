@@ -11,19 +11,21 @@ public class Program{
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Product product = new Product();
+        //Product product = new Product(); // Construtor padrão 
         System.out.println("Enter product data: ");
         System.out.println("Name: ");
-        product.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.println("Price: ");
-        product.price = sc.nextDouble();
+        double price = sc.nextDouble();
         System.out.println("Quantity: ");
-        product.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+        
+        Product product = new Product(name, price, quantity);
 
         System.out.println("Product data: " + product); //Método toString na classe Product, não precisa pôr Product.toString
 
         System.out.println("enter the number of products to be added in stock: ");
-        int quantity = sc.nextInt();
+        quantity = sc.nextInt();
         product.addProducts(quantity);
         System.out.println("Updated data: " + product);
 
