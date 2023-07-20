@@ -19,7 +19,7 @@ public class Program{
         double price = sc.nextDouble();
         System.out.println("Quantity: ");
         int quantity = sc.nextInt();
-        
+
         Product product = new Product(name, price, quantity);
 
         System.out.println("Product data: " + product); //Método toString na classe Product, não precisa pôr Product.toString
