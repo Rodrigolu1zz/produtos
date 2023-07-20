@@ -22,7 +22,11 @@ public class Program{
 
         Product product = new Product(name, price, quantity);
 
-        System.out.println("Product data: " + product); //Método toString na classe Product, não precisa pôr Product.toString
+        product.setName("Computer");
+        System.out.println("Product data: " + product.getName()); //Método toString na classe Product, não precisa pôr Product.toString
+        product.setPrice(1200.00);
+        System.out.println("Updated price: " + product.getPrice());
+        System.out.println("Quantity: " + product.getQuantity());
 
         System.out.println("enter the number of products to be added in stock: ");
         quantity = sc.nextInt();
